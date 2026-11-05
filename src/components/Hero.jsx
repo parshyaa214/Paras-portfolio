@@ -89,7 +89,9 @@ export default function Hero() {
             </button>
             <a
               href="/resume/Paras_Ram_Chavan_Resume.pdf"
-              download
+              download="Paras_Ram_Chavan_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-secondary"
             >
               <FileText size={15} />
