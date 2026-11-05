@@ -1,0 +1,215 @@
+/* ============================================================
+   EDITORIAL NAVBAR STYLES
+   ============================================================ */
+
+.editorial-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  transition: all 0.35s ease;
+  background: transparent;
+}
+
+.editorial-nav--scrolled {
+  background: rgba(248, 247, 242, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(36, 41, 35, 0.03);
+  height: 70px;
+}
+
+.editorial-nav__container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.editorial-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: opacity 0.25s ease;
+}
+
+.editorial-nav__brand:hover {
+  opacity: 0.8;
+}
+
+.editorial-nav__monogram-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #242923 0%, #37433B 60%, #4E735B 100%);
+  border: 1px solid rgba(169, 197, 216, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(36, 41, 35, 0.12);
+  flex-shrink: 0;
+}
+
+.editorial-nav__monogram-letters {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #EDF3F7;
+}
+
+.editorial-nav__brand-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+}
+
+.editorial-nav__palette-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: all var(--transition-base);
+}
+
+.editorial-nav__palette-trigger:hover {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Links */
+.editorial-nav__desktop {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.editorial-nav__link {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.editorial-nav__link:hover,
+.editorial-nav__link.is-active {
+  color: var(--text-primary);
+}
+
+/* Subtle Animated Underline on Hover */
+.editorial-nav__underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--sage);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-nav__link:hover .editorial-nav__underline,
+.editorial-nav__link.is-active .editorial-nav__underline {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Hamburger */
+.editorial-nav__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Mobile Drawer */
+.editorial-nav__mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(248, 247, 242, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.editorial-nav__mobile.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.editorial-nav__mobile-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.editorial-nav__mobile-link {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.editorial-nav__mobile-link:hover,
+.editorial-nav__mobile-link.is-active {
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 860px) {
+  .editorial-nav__desktop {
+    display: none;
+  }
+  .editorial-nav__hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .editorial-nav__container {
+    padding: 0 20px;
+  }
+}

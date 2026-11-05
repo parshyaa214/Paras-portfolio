@@ -1,0 +1,240 @@
+/* ============================================================
+   EDITORIAL MODERN PORTFOLIO — Paras Chavan
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ---------- Warm Editorial Palette ---------- */
+:root {
+  --bg-primary: #F8F7F2;
+  --bg-secondary: #EEEFE8;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F4F5EF;
+
+  --text-primary: #242923;
+  --text-secondary: #737A70;
+  --text-muted: #959D92;
+
+  /* Pastel accents */
+  --sage: #9CAF9A;
+  --sage-light: #EBF0EA;
+  --soft-blue: #A9C5D8;
+  --soft-blue-light: #EDF3F7;
+  --lavender: #D4C8E8;
+  --lavender-light: #F4F1FA;
+  --peach: #EBC6AE;
+  --peach-light: #FAF2EC;
+
+  /* Editorial subtle gradients */
+  --editorial-gradient: linear-gradient(135deg, #DCE8DC 0%, #E4EAF3 50%, #F0E5DC 100%);
+  --sage-blue-gradient: linear-gradient(135deg, #8EA58C 0%, #76A2C2 100%);
+  --warm-glow: rgba(156, 175, 154, 0.15);
+
+  --border: rgba(36, 41, 35, 0.08);
+  --border-hover: rgba(36, 41, 35, 0.2);
+  --shadow-sm: 0 2px 8px rgba(36, 41, 35, 0.04);
+  --shadow-md: 0 10px 30px rgba(36, 41, 35, 0.06);
+  --shadow-lg: 0 20px 50px rgba(36, 41, 35, 0.09);
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+
+  --nav-height: 80px;
+  --section-padding: 130px;
+  --transition-base: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: #DCE8DC;
+  color: var(--text-primary);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border-radius: 999px;
+}
+
+/* ---------- Typography Utility Classes ---------- */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--sage);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.section-wrapper {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Editorial Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: #FAF8F5;
+  box-shadow: 0 6px 20px rgba(36, 41, 35, 0.12);
+}
+
+.btn-primary:hover {
+  background: #151814;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(36, 41, 35, 0.18);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: #FFFFFF;
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Editorial Tags ---------- */
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+}
+
+.tag:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  :root {
+    --section-padding: 85px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .section-heading {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 65px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

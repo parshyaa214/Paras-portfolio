@@ -1,0 +1,306 @@
+/* ============================================================
+   EDITORIAL PROJECTS STYLES
+   ============================================================ */
+
+.editorial-projects {
+  background-color: var(--bg-primary);
+}
+
+.editorial-projects__header {
+  margin-bottom: 60px;
+}
+
+.editorial-projects__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.editorial-projects__intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.editorial-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+/* Card Styling */
+.editorial-card {
+  grid-column: span 6;
+  background: var(--bg-card);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-card--featured {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.editorial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
+}
+
+/* Visual Canvas */
+.editorial-card__visual {
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 28px;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+.editorial-card--featured .editorial-card__visual {
+  min-height: 380px;
+}
+
+.editorial-card__visual-ambient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.editorial-card__top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.editorial-card__view-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 12px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.editorial-card:hover .editorial-card__view-cta {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.editorial-card__type-pill {
+  position: relative;
+  z-index: 1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+.editorial-card__artwork {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-card:hover .editorial-card__artwork {
+  transform: translateY(-4px);
+}
+
+.editorial-card__artwork-index {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.35;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.editorial-card__artwork-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.editorial-card__artwork-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Card Body */
+.editorial-card__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.editorial-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.editorial-card__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sage);
+}
+
+.editorial-card__status {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.editorial-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.editorial-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Sub-projects list */
+.editorial-card__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--bg-card-subtle);
+  border-radius: 14px;
+}
+
+.editorial-card__subitem {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.editorial-card__subbullet {
+  color: var(--sage);
+  font-size: 0.75rem;
+}
+
+.editorial-card__subtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tag--sm {
+  padding: 3px 8px;
+  font-size: 0.7rem;
+}
+
+/* Tags */
+.editorial-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* Action Links */
+.editorial-card__actions {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.editorial-card__details-btn {
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.editorial-card__details-btn:hover {
+  color: #4E735B;
+  background: var(--sage-light);
+}
+
+.editorial-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.editorial-card__arrow {
+  transition: transform 0.25s ease;
+}
+
+.editorial-card__link:hover {
+  color: #4E735B;
+  gap: 12px;
+}
+
+.editorial-card__link:hover .editorial-card__arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .editorial-card,
+  .editorial-card--featured {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+/* ============================================================
+   EDITORIAL ANIMATIONS — Paras Chavan Portfolio
+   ============================================================ */
+
+/* Organic Floating Movement */
+@keyframes organicFloat1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(25px, -35px) scale(1.08) rotate(4deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.94) rotate(-3deg);
+  }
+}
+
+@keyframes organicFloat2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(-30px, 25px) scale(1.05) rotate(-5deg);
+  }
+  66% {
+    transform: translate(25px, -20px) scale(0.96) rotate(3deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+.organic-blob-1 {
+  animation: organicFloat1 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.organic-blob-2 {
+  animation: organicFloat2 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+.gentle-pulse {
+  animation: gentlePulse 8s ease-in-out infinite;
+}

@@ -1,0 +1,143 @@
+/* ============================================================
+   EDITORIAL EXPERIENCE STYLES
+   ============================================================ */
+
+.editorial-experience {
+  background-color: var(--bg-primary);
+}
+
+.editorial-experience__header {
+  margin-bottom: 50px;
+}
+
+.editorial-experience__card {
+  background: var(--bg-card);
+  border-radius: 28px;
+  padding: 44px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.editorial-experience__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.editorial-experience__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.editorial-experience__company {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.editorial-experience__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4E735B; /* Deep Sage */
+}
+
+.editorial-experience__date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.editorial-experience__duration {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--sage-light);
+  color: #557253;
+}
+
+.editorial-experience__summary {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+/* Achievements */
+.editorial-experience__achievements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.editorial-experience__achieve-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--bg-card-subtle);
+  border-radius: 16px;
+  border: 1px solid rgba(36, 41, 35, 0.04);
+}
+
+.editorial-experience__achieve-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  color: #557253;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(36, 41, 35, 0.06);
+}
+
+.editorial-experience__achieve-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Transferable skills */
+.editorial-experience__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 800px) {
+  .editorial-experience__card {
+    padding: 28px;
+  }
+  .editorial-experience__achievements {
+    grid-template-columns: 1fr;
+  }
+  .editorial-experience__date-badge {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,143 @@
+/* ============================================================
+   EDITORIAL SKILLS STYLES
+   ============================================================ */
+
+.editorial-skills {
+  background-color: var(--bg-secondary);
+}
+
+.editorial-skills__header {
+  margin-bottom: 50px;
+}
+
+.editorial-skills__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.editorial-skills__legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.editorial-skills__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editorial-skills__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.editorial-skills__dot--solid {
+  background: var(--sage);
+}
+
+.editorial-skills__dot--learning {
+  background: var(--soft-blue);
+  box-shadow: 0 0 0 2px rgba(169, 197, 216, 0.4);
+}
+
+/* Skills Grid */
+.editorial-skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.editorial-skills__card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-skills__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.editorial-skills__card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.editorial-skills__icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.editorial-skills__card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Skills List */
+.editorial-skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editorial-skills__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-card-subtle);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.editorial-skills__item:hover {
+  background: #ECEEE7;
+}
+
+.editorial-skills__item-name {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.editorial-skills__item-status {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: #557253;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--sage-light);
+}
+
+.editorial-skills__item--learning .editorial-skills__item-status {
+  color: #38678F;
+  background: var(--soft-blue-light);
+}
